@@ -11,3 +11,4 @@
 !.git*
 !.config
 !.tmux.conf
+!.bash*

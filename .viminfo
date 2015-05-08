@@ -8,16 +8,24 @@
 # hlsearch on (H) or off (h):
 ~h
 # Last Search Pattern:
-~MSle0/"
+~MSle0~/multilib
 
 # Last Substitute Search Pattern:
-~MSle0~&thickness
+~MSle0&thickness
 
 # Last Substitute String:
 $
 
 # Command Line History (newest to oldest):
+:q
+:q!
+:w!
 :w
+:e /etc/pacman.conf
+:e ~/.vimrc
+:e src/lib/texUtilities.py
+:wq
+:e .bash_aliases
 :e silcone-sr_small.py
 :e silicone_small.py
 :sav carbon_small.py
@@ -51,27 +59,17 @@ $
 :ci'
 :di'
 :ci
-:q
 :W
 :1
 :o foil_spray.py
 :buffer
 :b 0
-:q!
 :k
 :%s/"/'/g
-:wq
 :o .
-:o
-:qw
-:w! ~/.vimrc
-:w ~/.vimrc
-:r $VIMRUNTIME/vimrc_example.vim
-:e ~./vimrc
-:f
-:help
 
 # Search String History (newest to oldest):
+?/multilib
 ? \s\+$
 ? thickness
 ?/line
@@ -105,21 +103,32 @@ $
 "9	LINE	0
 	print(ticks)
 ""-	CHAR	0
-	 
+	#
 
 # File marks:
-'0  23  17  ~/Documents/I3E/caps/scripts/silcone-sr_small.py
-'1  19  126  ~/Documents/I3E/caps/scripts/carbon_small.py
-'2  1  0  ~/Documents/I3E/caps/scripts/silicone.py
-'3  26  30  ~/Documents/I3E/caps/scripts/foil_spraypaint.py
-'4  22  45  ~/Documents/I3E/caps/scripts/foil_spraypaint.py
-'5  1  0  ~/Documents/I3E/caps/scripts/areaPlot.py
-'6  85  0  ~/vagrant/cs220/asn-inverted-index-student-master/src/main/scala/cs220/actors/IndexActor.scala
-'7  28  0  ~/vagrant/cs220/asn-inverted-index-student-master/src/main/scala/cs220/actors/IndexActor.scala
-'8  119  0  ~/vagrant/cs220/asn-inverted-index-student-master/src/main/scala/cs220/actors/IndexActor.scala
-'9  58  244  ~/auerbach396/README.md
+'0  1  0  /tmp/yaourt-tmp-sean/aur-google-chrome/PKGBUILD
+'1  1  0  /tmp/yaourt-tmp-sean/aur-keytouch-editor/keytouch-editor.install
+'2  97  0  /etc/pacman.conf
+'3  5  0  ~/.vimrc
+'4  16  22  ~/dev/markov/src/bibleGen
+'5  3  28  ~/.bash_aliases
+'6  23  17  ~/Documents/I3E/caps/scripts/silcone-sr_small.py
+'7  19  126  ~/Documents/I3E/caps/scripts/carbon_small.py
+'8  1  0  ~/Documents/I3E/caps/scripts/silicone.py
+'9  26  30  ~/Documents/I3E/caps/scripts/foil_spraypaint.py
 
 # Jumplist (newest first):
+-'  1  0  /tmp/yaourt-tmp-sean/aur-google-chrome/PKGBUILD
+-'  1  0  /tmp/yaourt-tmp-sean/aur-keytouch-editor/keytouch-editor.install
+-'  97  0  /etc/pacman.conf
+-'  89  0  /etc/pacman.conf
+-'  7  0  /etc/pacman.conf
+-'  1  0  ~/dev/markov/src/bibleGen
+-'  5  0  ~/.vimrc
+-'  1  0  ~/dev/markov/src/lib/texUtilities.py
+-'  16  22  ~/dev/markov/src/bibleGen
+-'  3  28  ~/.bash_aliases
+-'  1  0  ~/.bash_aliases
 -'  23  17  ~/Documents/I3E/caps/scripts/silcone-sr_small.py
 -'  23  15  ~/Documents/I3E/caps/scripts/silicone_small.py
 -'  20  12  ~/Documents/I3E/caps/scripts/carbon_small.py
@@ -196,18 +205,54 @@ $
 -'  1  0  ~/Documents/I3E/caps/scripts/foil_spray.py
 -'  30  9  ~/Documents/I3E/caps/scripts/silicone.py
 -'  20  0  ~/Documents/I3E/caps/scripts/foil_spraypaint.py
-
-# Buffer list:
-%~/Documents/I3E/caps/scripts/foil_spray_small.py	1	0
-%~/Documents/I3E/caps/scripts/silicone.py	7	0
-%~/Documents/I3E/caps/scripts/silicone_small.py	23	15
-%~/Documents/I3E/caps/scripts/silicone_sr.py	1	0
-%~/Documents/I3E/caps/scripts/silicone-sr.py	17	0
-%~/Documents/I3E/caps/scripts/silcone-sr_small.py	23	17
-%~/Documents/I3E/caps/scripts/carbon_small.py	20	12
-%~/Documents/I3E/caps/scripts/carbon.py	1	0
+-'  23  17  ~/Documents/I3E/caps/scripts/silcone-sr_small.py
+-'  23  15  ~/Documents/I3E/caps/scripts/silicone_small.py
+-'  20  12  ~/Documents/I3E/caps/scripts/carbon_small.py
+-'  24  15  ~/Documents/I3E/caps/scripts/carbon_small.py
+-'  19  36  ~/Documents/I3E/caps/scripts/carbon_small.py
+-'  8  16  ~/Documents/I3E/caps/scripts/carbon_small.py
+-'  17  0  ~/Documents/I3E/caps/scripts/silicone-sr.py
+-'  1  0  ~/Documents/I3E/caps/scripts/silicone_sr.py
+-'  24  14  ~/Documents/I3E/caps/scripts/silicone_small.py
+-'  7  0  ~/Documents/I3E/caps/scripts/silicone.py
+-'  1  0  ~/Documents/I3E/caps/scripts/foil_spray_small.py
 
 # History of marks within files (newest to oldest):
+
+> /tmp/yaourt-tmp-sean/aur-google-chrome/PKGBUILD
+	"	1	0
+
+> /tmp/yaourt-tmp-sean/aur-keytouch-editor/keytouch-editor.install
+	"	1	0
+
+> ~/dev/markov/src/bibleGen
+	"	1	0
+	^	16	23
+	.	16	22
+	+	16	22
+
+> /etc/pacman.conf
+	"	97	0
+	.	93	0
+	+	90	0
+	+	90	0
+	+	92	0
+	+	93	0
+
+> ~/dev/markov/src/lib/texUtilities.py
+	"	1	0
+
+> ~/.vimrc
+	"	5	0
+	^	5	0
+	.	4	25
+	+	4	25
+
+> ~/.bash_aliases
+	"	3	28
+	^	3	29
+	.	3	29
+	+	3	29
 
 > ~/Documents/I3E/caps/scripts/foil_spray_small.py
 	"	1	0
