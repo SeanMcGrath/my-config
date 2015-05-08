@@ -10,3 +10,4 @@
 !.ssh
 !.git*
 !.config
+!.tmux.conf
