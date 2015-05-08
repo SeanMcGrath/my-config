@@ -1,0 +1,12 @@
+# Ignore everything
+*
+
+# Except:
+!.gitignore
+!.vim*
+!.vim/*
+!.emacs
+!.config
+!.ssh
+!.git*
+!.config
