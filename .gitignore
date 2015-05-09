@@ -11,4 +11,8 @@
 !.git*
 !.config
 !.tmux.conf
-!.bash*
+!.bashrc
+!.bash_aliases
+!./.i3/config
+
+.viminfo

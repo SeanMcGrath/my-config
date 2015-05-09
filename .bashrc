@@ -9,7 +9,8 @@ if [ -f ~/.bash_aliases ]; then
     . ~/.bash_aliases
 fi
 
-alias ls='ls --color=auto'
+# add ruby gems to path
+PATH="$(ruby -e 'print Gem.user_dir')/bin:$PATH"
 
 ### FUNCTIONS
 
