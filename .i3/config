@@ -160,6 +160,10 @@ bindsym XF86AudioMute exec pulseaudio-ctl mute
 bindsym XF86AudioRaiseVolume exec pulseaudio-ctl up
 bindsym XF86AudioLowerVolume exec pulseaudio-ctl down
 
+# Enable backlight keys
+bindsym XF86MonBrightnessUp exec light -A 5
+bindsym XF86MonBrightnessDown exec light -U 5
+
 # config borders
 new_window 1pixel
 
