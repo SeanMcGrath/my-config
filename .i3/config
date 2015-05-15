@@ -155,14 +155,10 @@ bar {
         status_command i3status
 }
 
-# Enable media keys
+# Enable media keys theat don't play nice with ACPID
 bindsym XF86AudioMute exec pulseaudio-ctl mute
 bindsym XF86AudioRaiseVolume exec pulseaudio-ctl up
 bindsym XF86AudioLowerVolume exec pulseaudio-ctl down
-
-# Enable backlight keys
-bindsym XF86MonBrightnessUp exec light -A 5
-bindsym XF86MonBrightnessDown exec light -U 5
 
 # config borders
 new_window 1pixel
@@ -174,3 +170,6 @@ assign [class="Spotify" instance="spotify"] 2
 exec google-chrome-stable
 exec spotify
 exec i3-msg 'workspace 3; exec i3-sensible-terminal; exec i3-sensible-terminal; workspace 1;'
+
+# Start screen locker
+exec xautolock -detectsleep -time 10 -locker "i3lock -d -c 000000" -notify 30 -notifier "notify-send -u critical -t 10000 -- 'LOCKING screen in 30 seconds'"

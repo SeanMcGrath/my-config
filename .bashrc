@@ -5,15 +5,20 @@
 # If not running interactively, don't do anything
 [[ $- != *i* ]] && return
 
+# load alias file
 if [ -f ~/.bash_aliases ]; then
     . ~/.bash_aliases
+fi
+
+if [ -d ~/scripts ]; then
+	PATH="~/scripts:$PATH"
 fi
 
 ## change lynx homepage
 export www_home="https://www.google.com"
 
 # add ruby gems to path
-PATH="/home/sean/scripts/:$(ruby -e 'print Gem.user_dir')/bin:$PATH"
+PATH="$(ruby -e 'print Gem.user_dir')/bin:$PATH"
 
 ### FUNCTIONS
 
