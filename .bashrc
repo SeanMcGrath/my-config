@@ -9,8 +9,11 @@ if [ -f ~/.bash_aliases ]; then
     . ~/.bash_aliases
 fi
 
+## change lynx homepage
+export www_home="https://www.google.com"
+
 # add ruby gems to path
-PATH="$(ruby -e 'print Gem.user_dir')/bin:$PATH"
+PATH="/home/sean/scripts/:$(ruby -e 'print Gem.user_dir')/bin:$PATH"
 
 ### FUNCTIONS
 
@@ -49,25 +52,3 @@ mktar() { tar cvf  "${1%%/}.tar"     "${1%%/}/"; }
 mktgz() { tar cvzf "${1%%/}.tar.gz"  "${1%%/}/"; }
 mktbz() { tar cvjf "${1%%/}.tar.bz2" "${1%%/}/"; }
 
-### ALIASES
-
-## Keeping things organized
-alias ls='ls --color=auto'
-alias ll='ls -l'
-alias la='ls -A'
-alias rm='mv -t ~/.local/share/Trash/files'
-alias cp='cp -i'
-alias mv='mv -i'
-alias mkdir='mkdir -p -v'
-alias df='df -h'
-alias du='du -h -c'
-alias reload='source ~/.bashrc'
-alias biggest='BLOCKSIZE=1048576; du -x | sort -nr | head -10'
-
-## Moving around & all that jazz
-alias back='cd $OLDPWD'
-alias ..="cd .."
-alias ...="cd ../.."
-alias ....="cd ../../.."
-alias .....="cd ../../../.."
-alias ......="cd ../../../../.."
