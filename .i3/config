@@ -9,7 +9,7 @@
 #
 # Please see http://i3wm.org/docs/userguide.html for a complete reference!
 
-set $mod Mod4
+set $mod Mod1
 
 # Font for window titles. Will also be used by the bar unless a different font
 # is used in the bar {} block below.
@@ -135,12 +135,20 @@ mode "resize" {
         bindsym k resize grow height 10 px or 10 ppt
         bindsym l resize shrink height 10 px or 10 ppt
         bindsym semicolon resize grow width 10 px or 10 ppt
+	bindsym Shift+j resize shrink width 1 px or 1 ppt
+	bindsym Shift+k resize grow height 1 px or 1 ppt
+	bindsym Shift+l resize shrink height 1 px or 1 ppt
+	bindsym Shift+semicolon resize grow width 1 px or 1 ppt
 
         # same bindings, but for the arrow keys
         bindsym Left resize shrink width 10 px or 10 ppt
         bindsym Down resize grow height 10 px or 10 ppt
         bindsym Up resize shrink height 10 px or 10 ppt
         bindsym Right resize grow width 10 px or 10 ppt
+	bindsym Shift+Left resize shrink width 1 px or 1 ppt
+	bindsym Shift+Down resize grow height 1 px or 1 ppt
+	bindsym Shift+Up resize shrink height 1 px or 1 ppt
+	bindsym Shift+Right resize grow width 1 px or 1 ppt
 
         # back to normal: Enter or Escape
         bindsym Return mode "default"
@@ -161,7 +169,7 @@ bindsym XF86AudioRaiseVolume exec pulseaudio-ctl up
 bindsym XF86AudioLowerVolume exec pulseaudio-ctl down
 
 # config borders
-new_window 1pixel
+new_window none
 
 # Assign workspaces
 assign [class="Spotify" instance="spotify"] 2
@@ -173,3 +181,10 @@ exec i3-msg 'workspace 3; exec i3-sensible-terminal; exec i3-sensible-terminal; 
 
 # Start screen locker
 exec xautolock -detectsleep -time 10 -locker "i3lock -d -c 000000" -notify 30 -notifier "notify-send -u critical -t 10000 -- 'LOCKING screen in 30 seconds'"
+
+# Custom program hotkeys
+bindsym $mod+x exec chrome
+bindsym $mod+c exec subl3
+
+# Enable Alt-Tab
+bindsym $mod+Tab focus left
