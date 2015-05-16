@@ -186,5 +186,7 @@ exec xautolock -detectsleep -time 10 -locker "i3lock -d -c 000000" -notify 30 -n
 bindsym $mod+x exec chrome
 bindsym $mod+c exec subl3
 
-# Enable Alt-Tab
-bindsym $mod+Tab focus left
+# Enable Windows Shortcuts
+bindsym Mod1+Tab focus left
+bindsym Mod4+Tab workspace next
+bindsym Mod1+F4 kill
