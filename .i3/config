@@ -184,7 +184,7 @@ exec i3-msg 'workspace 3; exec i3-sensible-terminal; exec i3-sensible-terminal; 
 exec xautolock -detectsleep -time 10 -locker "i3lock -d -c 000000" -notify 30 -notifier "notify-send -u critical -t 30 -- 'LOCKING screen in 30 seconds'"
 
 # Connect/Reconnect to external Monitor
-bindsym $mod+m exec xrandr --output DP2 --off; exec xrandr --output DP2 --auto --left-of eDP1; restart
+bindsym $mod+m exec xrandr --output DP2 --off; exec xrandr --output DP2 --auto --right-of eDP1; restart
 
 # Custom program hotkeys
 bindsym $mod+x exec chrome

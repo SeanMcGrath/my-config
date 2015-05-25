@@ -10,15 +10,21 @@ if [ -f ~/.bash_aliases ]; then
     . ~/.bash_aliases
 fi
 
+# Add user scripts to path
 if [ -d ~/scripts ]; then
 	PATH="~/scripts:$PATH"
 fi
 
+# Configure urxvt
+# if [ -f ~/.Xresources ]; then
+#     xrdb ~/.Xresources
+# fi
+
 ## change lynx homepage
 export www_home="https://www.google.com"
 
-# add ruby gems to path
-PATH="$(ruby -e 'print Gem.user_dir')/bin:$PATH"
+# add ruby gems and conscript binaries to path
+PATH="$(ruby -e 'print Gem.user_dir')/bin:~/bin:$PATH"
 
 ### FUNCTIONS
 
