@@ -1,5 +1,7 @@
 let g:netrw_dirhistmax  =10
-let g:netrw_dirhist_cnt =3
-let g:netrw_dirhist_1='/home/sean/.vim'
-let g:netrw_dirhist_2='/home/sean'
-let g:netrw_dirhist_3='/home/sean/dev/django-test'
+let g:netrw_dirhist_cnt =5
+let g:netrw_dirhist_1='/home/sean/.vim/indent'
+let g:netrw_dirhist_2='/home/sean/.vim'
+let g:netrw_dirhist_3='/home/sean'
+let g:netrw_dirhist_4='/home/sean/.vim_runtime'
+let g:netrw_dirhist_5='/home/sean'
