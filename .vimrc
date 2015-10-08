@@ -19,4 +19,5 @@ source ~/.vim_runtime/my_configs.vim
 catch
 endtry
 
-map - :Explore<cr>
+map - :NERDTreeToggle<CR>
+cmap w!! w !sudo tee % >/dev/null

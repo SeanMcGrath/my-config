@@ -63,3 +63,7 @@ mktar() { tar cvf  "${1%%/}.tar"     "${1%%/}/"; }
 mktgz() { tar cvzf "${1%%/}.tar.gz"  "${1%%/}/"; }
 mktbz() { tar cvjf "${1%%/}.tar.bz2" "${1%%/}/"; }
 
+export WD="/home/sean/vagrant/www/wordpress-default/wp-content/themes/antaresmicro"
+
+# added by Anaconda3 2.3.0 installer
+export PATH="/home/sean/anaconda3/bin:$PATH"

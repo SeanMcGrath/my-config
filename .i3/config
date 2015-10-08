@@ -94,22 +94,22 @@ bindsym $mod+a focus parent
 #bindsym $mod+d focus child
 
 # switch to workspace
-bindsym $mod+1 workspace 1
-bindsym $mod+2 workspace 2
-bindsym $mod+3 workspace 3
-bindsym $mod+4 workspace 4
-bindsym $mod+5 workspace 5
-bindsym $mod+6 workspace 6
-bindsym $mod+7 workspace 7
-bindsym $mod+8 workspace 8
-bindsym $mod+9 workspace 9
-bindsym $mod+0 workspace 10
+bindsym $mod+1 workspace 1:www
+bindsym $mod+2 workspace 2:music
+bindsym $mod+3 workspace 3:term
+bindsym $mod+4 workspace 4:subl
+bindsym $mod+5 workspace number 5
+bindsym $mod+6 workspace number 6
+bindsym $mod+7 workspace number 7
+bindsym $mod+8 workspace number 8
+bindsym $mod+9 workspace number 9
+bindsym $mod+0 workspace number 10
 
 # move focused container to workspace
-bindsym $mod+Shift+1 move container to workspace 1
-bindsym $mod+Shift+2 move container to workspace 2
-bindsym $mod+Shift+3 move container to workspace 3
-bindsym $mod+Shift+4 move container to workspace 4
+bindsym $mod+Shift+1 move container to workspace 1:www
+bindsym $mod+Shift+2 move container to workspace 2:music
+bindsym $mod+Shift+3 move container to workspace 3:term
+bindsym $mod+Shift+4 move container to workspace 4:subl
 bindsym $mod+Shift+5 move container to workspace 5
 bindsym $mod+Shift+6 move container to workspace 6
 bindsym $mod+Shift+7 move container to workspace 7
@@ -162,23 +162,30 @@ bindsym $mod+r mode "resize"
 # finds out, if available)
 bar {
         status_command i3status
+	strip_workspace_numbers yes
 }
 
 # Enable media keys theat don't play nice with ACPID
 bindsym XF86AudioMute exec pulseaudio-ctl mute
 bindsym XF86AudioRaiseVolume exec pulseaudio-ctl up
 bindsym XF86AudioLowerVolume exec pulseaudio-ctl down
+bindsym XF86MonBrightnessUp exec xbacklight + 5
+bindsym XF86MonBrightnessDown exec xbacklight - 5
 
 # config borders
-new_window none
+new_window pixel
+hide_edge_borders vertical
 
-# Assign workspaces
-assign [class="Spotify" instance="spotify"] 2
+# Load default layout
+exec --no-startup-id "i3-msg 'workspace 1:www; exec google-chrome-stable; append_layout /home/sean/.i3/eDP1.json'"
 
 # startup programs
-exec google-chrome-stable
-exec spotify
-exec i3-msg 'workspace 3; exec i3-sensible-terminal; exec i3-sensible-terminal; workspace 1;'
+exec i3-sensible-terminal
+exec i3-sensible-terminal
+exec i3-sensible-terminal
+exec i3-sensible-terminal
+exec subl3
+exec i3-msg 'workspace 1:www'
 
 # Start screen locker
 exec xautolock -detectsleep -time 10 -locker "i3lock -d -c 000000"
@@ -188,7 +195,7 @@ bindsym $mod+m exec xrandr --output DP2 --auto --right-of eDP1; restart
 bindsym $mod+n exec xrandr --output DP2 --off; restart
 
 # Custom program hotkeys
-bindsym $mod+x exec chrome
+bindsym $mod+x exec google-chrome-chrome
 bindsym $mod+c exec subl3
 
 # Enable Windows Shortcuts

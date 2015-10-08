@@ -1,5 +1,6 @@
 # Ignore everything
 *
+*.tmp
 
 # Except:
 !.gitignore
@@ -7,12 +8,11 @@
 !.vim/*
 !.emacs
 !.config
-!.ssh
 !.git*
 !.config
 !.tmux.conf
 !.bashrc
 !.bash_aliases
-!./.i3/config
+!./.i3/*
 
 .viminfo
