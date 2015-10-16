@@ -1,6 +1,7 @@
 # Aliases for bash terminal
 
 alias install='sudo pacman -S'
+alias upgrade='sudo pacman -Syu'
 alias aur='yaourt -S'
 alias emacs='emacs -nw'
 alias edit='emacs'
@@ -10,6 +11,7 @@ alias rb='systemctl reboot'
 alias snpm='sudo npm'
 alias ls='ls --color=auto'
 alias la='ls -A'
+alias cl='clear'
 alias ..='cd ..'
 alias ...='cd ../..'
 alias chrome='google-chrome-stable'

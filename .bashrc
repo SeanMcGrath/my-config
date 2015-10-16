@@ -63,6 +63,10 @@ mktar() { tar cvf  "${1%%/}.tar"     "${1%%/}/"; }
 mktgz() { tar cvzf "${1%%/}.tar.gz"  "${1%%/}/"; }
 mktbz() { tar cvjf "${1%%/}.tar.bz2" "${1%%/}/"; }
 
+# search for a file
+search() { find | grep $1 | less; }
+
+# Current project dir
 export WD="/home/sean/vagrant/www/wordpress-default/wp-content/themes/antaresmicro"
 
 # added by Anaconda3 2.3.0 installer
